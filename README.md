@@ -2,7 +2,9 @@
 
 `llmux` is a small Go prototype of an OpenAI-compatible chat-completion gateway. It accepts `POST /v1/chat/completions`, routes a requested model to an ordered provider list, and tries the fallback when an upstream request fails. It demonstrates provider interfaces, request-scoped cancellation, deadlines, response-size limits and bounded in-flight work.
 
-This is a prototype in progress, not a production gateway. It currently supports non-streaming JSON chat-completion requests only. It has no tenant authentication, persistent budgets, rate limiting, caching, semantic retrieval, circuit breaker, retry policy, distributed coordination, telemetry backend or provider-specific adapters beyond generic OpenAI-compatible HTTP endpoints. It has no measured performance or cost results. The existing project specification describes future directions, not implemented features. This prototype was created with AI coding assistance and still needs owner review before the code or design is presented as accepted personal work.
+This is a prototype in progress, not a production gateway. It currently supports non-streaming JSON chat-completion requests only. It has no tenant authentication, persistent budgets, rate limiting, caching, semantic retrieval, circuit breaker, retry policy, distributed coordination, telemetry backend or provider-specific adapters beyond generic OpenAI-compatible HTTP endpoints. It has no measured performance or cost results. The existing project specification describes future directions, not implemented features.
+
+Created with AI coding assistance under Kausthubh’s direction and published as a portfolio prototype on 14 October 2026. Review the source, tests and current limitations; this prototype has no production use or performance claim.
 
 The server binds to `127.0.0.1:8080` by default because it has no client authentication. Do not expose it on a network interface until authentication and access controls are implemented.
 
